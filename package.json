@@ -1,0 +1,26 @@
+{
+  "name": "render-mockup",
+  "version": "1.1.0",
+  "source": "src/render-mockup.js",
+  "module": "dist/render-mockup.es.js",
+  "main": "dist/render-mockup.js",
+  "umd:main": "dist/render-mockup.umd.js",
+  "devDependencies": {
+    "microbundle": "^0.11.0",
+    "prettier": "^1.19.1",
+    "uglify-es": "^3.3.9"
+  },
+  "scripts": {
+    "build": "microbundle build --globals three=THREE,gsapdat.gui=dat",
+    "watch": "microbundle watch --globals three=THREE,gsapdat.gui=dat",
+    "publish": "npm publish --access public"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "dat.gui": "^0.7.9",
+    "gsap": "^2.0.2",
+    "three": "^0.137.0"
+  }
+}

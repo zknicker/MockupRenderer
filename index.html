@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset=utf-8>
+	<title>T-Shirt Mockup Configurator Prototype</title>
+	<style>
+		body {
+			margin: 10px;
+			background: white
+		}
+
+		.mockup {
+			margin: 10px auto;
+			position: relative;
+		}
+	</style>
+	<script src="js/three.min.js"></script>
+	<script src="js/dat.gui.min.js"></script>
+	<script src="dist/render-mockup.umd.js"></script>
+</head>
+<body>
+
+	<div class="mockup"></div>
+
+	<script>
+
+		const mockup = 'images/tshirt.jpg';
+		const design = 'images/fall.36.1.png';
+		const displacementMap = 'images/mockup_displacement.jpg';
+		const parent = document.querySelector('.mockup');
+
+		var button = new renderMockup(mockup, design, displacementMap, parent);
+	</script>
+</body>
+
+</html>
